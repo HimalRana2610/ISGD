@@ -1,6 +1,9 @@
-# Multi-Attribute Facial Recognition System
+# ISGD and AKRTI
+Official implementation of:
 
-A comprehensive machine learning project for facial attribute prediction using multiple state-of-the-art deep learning architectures. This repository contains training notebooks and evaluation metrics for models trained on both ISGD and CelebA datasets.
+"ISGD and AKRTI: A Multi-Label Facial Dataset and ConvNeXt-based Framework for Skincare and Grooming Recommendation"
+
+Submitted to The Visual Computer (Springer).
 
 ## 📊 Project Overview
 
@@ -88,15 +91,21 @@ Note: Dataset files are not included in this repository. Training notebooks expe
    cd ISGD
    ```
 
+2. **Setup virtual environment**
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate
+   ```
+
 2. **Install dependencies**
    ```bash
-   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-   pip install timm pandas numpy scikit-learn tqdm pillow jupyter
+   pip install -r requirements.txt
    ```
 
 3. **Prepare datasets**
-   - Place your ISGD dataset in the appropriate directory
-   - Download CelebA dataset if needed for CelebA training notebooks
+   ```bash
+   python download_data.py
+   ```
 
 ## 📓 Notebook Guide
 
@@ -257,6 +266,10 @@ attribute, auc, accuracy, macro_f1, micro_f1, precision, recall
 - Swin Transformer: Liu et al., "Swin Transformer: Hierarchical Vision Transformer"
 - EfficientNet: Tan & Le, "EfficientNet: Rethinking Model Scaling"
 - FocalNet: Yang et al., "Focal Modulation Networks"
+
+⚠️ This repository contains the official implementation associated with the manuscript currently submitted to The Visual Computer.
+
+If you use this dataset or code, please cite our manuscript.
 
 ---
 
